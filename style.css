@@ -30,6 +30,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    user-select: none;
 }
 
 .cell:first-child,
@@ -50,4 +51,8 @@ body {
 .cell:nth-last-child(2),
 .cell:nth-last-child(3) {
     border-bottom: none;
+}
+
+.cell:not(.X):not(.O):hover {
+    background-color: rgba(128, 128, 128, 0.4);
 }
