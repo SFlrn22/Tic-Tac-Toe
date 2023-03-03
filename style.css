@@ -1,0 +1,53 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.game-wrapper {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.board {
+    width: 100vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    align-content: center;
+}
+
+.cell {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid black;
+    font-size: 102px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(3n+1) {
+    border-left: none;
+}
+
+.cell:nth-child(3n+3) {
+    border-right: none;
+}
+
+.cell:last-child,
+.cell:nth-last-child(2),
+.cell:nth-last-child(3) {
+    border-bottom: none;
+}
